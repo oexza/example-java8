@@ -1,6 +1,9 @@
 package org.example.domain;
 
 import org.example.domain.finder.ProductFinder;
+
+import java.util.UUID;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
@@ -22,7 +25,7 @@ public class Product extends BaseModel {
   public Product() {
   }
 
-  public Product(Long id) {
+  public Product(UUID id) {
     this.id = id;
   }
 

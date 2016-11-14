@@ -1,10 +1,13 @@
 package org.example.domain.finder;
 
 import com.avaje.ebean.Finder;
+
+import java.util.UUID;
+
 import org.example.domain.Contact;
 import org.example.domain.query.QContact;
 
-public class ContactFinder extends Finder<Long,Contact> {
+public class ContactFinder extends Finder<UUID,Contact> {
 
   /**
    * Construct using the default EbeanServer.

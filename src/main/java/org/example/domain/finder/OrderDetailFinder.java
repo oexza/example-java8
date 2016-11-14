@@ -1,10 +1,13 @@
 package org.example.domain.finder;
 
 import com.avaje.ebean.Finder;
+
+import java.util.UUID;
+
 import org.example.domain.OrderDetail;
 import org.example.domain.query.QOrderDetail;
 
-public class OrderDetailFinder extends Finder<Long,OrderDetail> {
+public class OrderDetailFinder extends Finder<UUID,OrderDetail> {
 
   /**
    * Construct using the default EbeanServer.

@@ -14,6 +14,7 @@ import org.example.domain.Product;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class LoadExampleData {
 
@@ -21,6 +22,10 @@ public class LoadExampleData {
 
   private static EbeanServer server = Ebean.getServer(null);
 
+  final UUID product1Id = UUID.randomUUID();
+  final UUID product2Id = UUID.randomUUID();
+  final UUID product3Id = UUID.randomUUID();
+  
   public static synchronized void load() {
 
     if (runOnce) {
@@ -208,9 +213,11 @@ public class LoadExampleData {
 
   private Order createOrder1(Customer customer) {
 
-    Product product1 = new Product(1L);
-    Product product2 = new Product(2L);
-    Product product3 = new Product(3L);
+
+	  
+    Product product1 = new Product(product1Id);
+    Product product2 = new Product(product2Id);
+    Product product3 = new Product(product3Id);
 
     Order order = new Order(customer);
 
@@ -245,8 +252,8 @@ public class LoadExampleData {
 
   private void createOrder3(Customer customer) {
 
-    Product product1 = Product.find.ref(1L);
-    Product product3 = Product.find.ref(3L);
+    Product product1 = Product.find.ref(product1Id);
+    Product product3 = Product.find.ref(product3Id);
 
     Order order = new Order(customer);
     order.setStatus(Status.COMPLETE);

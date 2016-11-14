@@ -1,10 +1,13 @@
 package org.example.domain.finder;
 
 import com.avaje.ebean.Finder;
+
+import java.util.UUID;
+
 import org.example.domain.Address;
 import org.example.domain.query.QAddress;
 
-public class AddressFinder extends Finder<Long,Address> {
+public class AddressFinder extends Finder<UUID,Address> {
 
   /**
    * Construct using the default EbeanServer.

@@ -1,6 +1,9 @@
 package org.example.domain.finder;
 
 import com.avaje.ebean.Finder;
+
+import java.util.UUID;
+
 import org.example.domain.Country;
 import org.example.domain.query.QCountry;
 

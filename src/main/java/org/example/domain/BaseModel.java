@@ -1,6 +1,7 @@
 package org.example.domain;
 
 import java.sql.Timestamp;
+import java.util.UUID;
 
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
@@ -24,7 +25,7 @@ import com.avaje.ebean.annotation.UpdatedTimestamp;
 public abstract class BaseModel extends Model {
 
   @Id
-  Long id;
+  UUID id;
 
   @Version
   Long version;
@@ -35,12 +36,12 @@ public abstract class BaseModel extends Model {
   @UpdatedTimestamp
   Timestamp whenUpdated;
 
-  public Long getId() {
-    return id;
+  public UUID getId() {
+	return id;
   }
 
-  public void setId(Long id) {
-    this.id = id;
+  public void setId(UUID id) {
+	this.id = id;
   }
 
   public Long getVersion() {

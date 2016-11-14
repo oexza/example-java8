@@ -4,6 +4,7 @@ import org.example.ExampleBaseTestCase;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.UUID;
 
 public class ExamplePartialObjectQueryTest extends ExampleBaseTestCase {
 
@@ -13,7 +14,7 @@ public class ExamplePartialObjectQueryTest extends ExampleBaseTestCase {
     Customer customer =
        Customer.find
            .select("name, email")
-           .id.eq(12)
+           .id.eq(UUID.randomUUID())
            .findUnique();
   }
 

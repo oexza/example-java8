@@ -22,7 +22,7 @@ public class LargeQueryWithFindIterateTest extends ExampleBaseTestCase {
 
     Customer.find
       .where()
-        .id.lessThan(8)
+        //.id.lessThan(8)
         .select("id, name")
         .findEach((Customer customer) -> {
           long processCount = counter.incrementAndGet();
