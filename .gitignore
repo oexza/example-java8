@@ -1,5 +1,5 @@
 *.autofetch
-*.sql
+#*.sql
 .classpath
 .project
 .settings/
